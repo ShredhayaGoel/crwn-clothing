@@ -4,34 +4,43 @@ import './index.scss';
 
 const categories = [
   {
-    id: 1,
-    tittle: 'Hats',
+    "id": 1,
+    "title": "hats",
+    "imageUrl": "https://i.ibb.co/cvpntL1/hats.png"
   },
   {
-    id: 2,
-    tittle: 'Jackets',
+    "id": 2,
+    "title": "jackets",
+    "imageUrl": "https://i.ibb.co/px2tCc3/jackets.png"
   },
   {
-    id: 3,
-    tittle: 'Sneakers',
+    "id": 3,
+    "title": "sneakers",
+    "imageUrl": "https://i.ibb.co/0jqHpnp/sneakers.png"
   },
   {
-    id: 4,
-    tittle: 'Womens',
+    "id": 4,
+    title: "womens",
+    imageUrl: "https://i.ibb.co/GCCdy8t/womens.png"
   },
   {
-    id: 5,
-    tittle: 'Mens',
-  },
+    "id": 5,
+    title: 'mens',
+    imageUrl: "https://i.ibb.co/R70vBrQ/men.png"
+  }
 ]
+
 const App = () => {
   return (
     <div className="categories-container">
-      {categories.map(({ id, tittle }) => (
-        <div className='category-container'>
-          <img />
-          <div className='category-name'>
-            <h2>{tittle}</h2>
+      {categories.map(({ id, title, imageUrl }) => (
+        <div key={id} className='category-container'>
+          <div className='background-image' style={{
+            backgroundImage: `url(${imageUrl})`,
+          }} />
+          <div className='category-body-container'>
+
+            <h2>{title}</h2>
             <p>Shop-Now</p>
           </div>
         </div>
