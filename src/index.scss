@@ -1,0 +1,13 @@
+$color: aqua;
+.categories-container {
+  background-color: $color;
+  padding: 20px;
+}
+.categories-container .category-container {
+  background-color: brown;
+  padding: 30px;
+}
+.categories-container .category-container .category-name {
+  background-color: aquamarine;
+  padding: 25px;
+}
